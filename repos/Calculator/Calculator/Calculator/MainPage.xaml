@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Calculator"
+             x:Class="Calculator.MainPage">
+    
+    <ContentPage.Padding>
+        <OnPlatform
+            x:TypeArguments="Thickness"
+            iOS="0,20,0,0" />
+    </ContentPage.Padding>
+
+    <Grid
+        x:Name="CalculatorLayout"
+        BackgroundColor="Black"
+        RowSpacing="-10"
+        ColumnSpacing="-6">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="2*" />
+            <RowDefinition
+                Height="*" />
+            <RowDefinition
+                Height="*" />
+            <RowDefinition
+                Height="*" />
+            <RowDefinition
+                Height="*" />
+            <RowDefinition
+                Height="*" />
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition
+                Width="*" />
+            <ColumnDefinition
+                Width="*" />
+            <ColumnDefinition
+                Width="*" />
+            <ColumnDefinition
+                Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label
+            x:Name="displayResult"
+            Text="0"
+            TextColor="White"
+            FontSize="80"
+            Grid.ColumnSpan="4"
+            HorizontalTextAlignment="End"
+            VerticalTextAlignment="End"
+            BackgroundColor="Black"
+            LineBreakMode="NoWrap"/>
+
+        <Button
+            Text="C"
+            TextColor="Black"
+            FontSize="30"
+            Grid.Row="5"
+            Grid.Column="0"
+            BackgroundColor="Gray"
+            Clicked="ClearDisplay"/>
+        <Button
+            Text="="
+            TextColor="Black"
+            FontSize="30"
+            Grid.Row="5"
+            Grid.Column="1"
+            Grid.ColumnSpan="3"
+            BackgroundColor="Orange"
+            Clicked="Calculate"/>
+
+        <Button
+            Text="0"
+            TextColor="Black"
+            FontSize="30"
+            Grid.Row="4"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            BackgroundColor="White"
+            Clicked="NumberSelect"/>
+        <Button
+            Text="+"
+            TextColor="White"
+            FontSize="30"
+            Grid.Row="4"
+            Grid.Column="3"
+            BackgroundColor="Orange"
+            Clicked="OperationSelect"/>
+
+        <Button
+            Text="1"
+            TextColor="Black"
+            FontSize="30"
+            Grid.Row="3"
+            Grid.Column="0"
+            BackgroundColor="White"
+            Clicked="NumberSelect"/>
+        <Button
+            Text="2"
+            TextColor="Black"
+            FontSize="30"
+            Grid.Row="3"
+            Grid.Column="1"
+            BackgroundColor="White"
+            Clicked="NumberSelect"/>
+        <Button
+            Text="3"
+            TextColor="Black"
+            FontSize="30"
+            Grid.Row="3"
+            Grid.Column="2"
+            BackgroundColor="White"
+            Clicked="NumberSelect"/>
+        <Button
+            Text="-"
+            TextColor="White"
+            FontSize="30"
+            Grid.Row="3"
+            Grid.Column="3"
+            BackgroundColor="Orange"
+            Clicked="OperationSelect"/>
+
+        <Button
+            Text="4"
+            TextColor="Black"
+            FontSize="30"
+            Grid.Row="2"
+            Grid.Column="0"
+            BackgroundColor="White"
+            Clicked="NumberSelect"/>
+        <Button
+            Text="5"
+            TextColor="Black"
+            FontSize="30"
+            Grid.Row="2"
+            Grid.Column="1"
+            BackgroundColor="White"
+            Clicked="NumberSelect"/>
+        <Button
+            Text="6"
+            TextColor="Black"
+            FontSize="30"
+            Grid.Row="2"
+            Grid.Column="2"
+            BackgroundColor="White"
+            Clicked="NumberSelect"/>
+        <Button
+            Text="*"
+            TextColor="White"
+            FontSize="30"
+            Grid.Row="2"
+            Grid.Column="3"
+            BackgroundColor="Orange"
+            Clicked="OperationSelect"/>
+
+        <Button
+            Text="7"
+            TextColor="Black"
+            FontSize="30"
+            Grid.Row="1"
+            Grid.Column="0"
+            BackgroundColor="White"
+            Clicked="NumberSelect"/>
+        <Button
+            Text="8"
+            TextColor="Black"
+            FontSize="30"
+            Grid.Row="1"
+            Grid.Column="1"
+            BackgroundColor="White"
+            Clicked="NumberSelect"/>
+        <Button
+            Text="9"
+            TextColor="Black"
+            FontSize="30"
+            Grid.Row="1"
+            Grid.Column="2"
+            BackgroundColor="White"
+            Clicked="NumberSelect"/>
+        <Button
+            Text="/"
+            TextColor="White"
+            FontSize="30"
+            Grid.Row="1"
+            Grid.Column="3"
+            BackgroundColor="Orange"
+            Clicked="OperationSelect"/>
+    </Grid>
+
+
+</ContentPage>
